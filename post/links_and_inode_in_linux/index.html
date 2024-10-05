@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <title>Links and inode in Linux - pravindotonline Blog</title>
+
+    
+    
+    <meta name="description" content="Firstly, What is an inode and what it has to do with links in Linux?
+An inode (or Index node) is a data structure in Linux File System which stores information about a file system object. Each object in file system gets an unique inode number which distinguishes it from other inodes. Every file and directory in the Linux File System has an inode number.
+You can check the inode number of files and dirs of your present working dir using ls -i command." />
+    <meta name="author" content="Pravin Kumar" />
+    
+
+    
+
+    <link href="https://unpkg.com/@master/normal.css" rel="stylesheet">
+    <script src="https://unpkg.com/@master/style@1.5.0"></script>
+    <script src="https://unpkg.com/@master/styles@1.13.0"></script>
+    <script src="https://unpkg.com/master-styles-group"></script>
+    <script src="https://unpkg.com/themes.js"></script>
+    <script>window.themes = window.themes || new window.Themes()</script>
+
+    <style>
+        :root {
+            --font-sans: "Inter var", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+        }
+    </style></head>
+<body class="bg:#000000@dark font:fade-10@dark font:sans">
+    <nav class="w:full h:90 fixed bg:#000000@dark bg:#ffffff z:1000">
+    <div class="
+        h:full
+        w:full
+        max-w:1200
+        mx:auto
+        px:32
+        d:flex
+        align-items:center
+    ">
+        <div>
+            <a href="https://pravindotonline.github.io/blog" class="mr-3 font:#ffffff">
+              
+              pravindotonline Blog
+              
+            </a>
+        </div>
+
+        <div class="ml:auto">
+            
+            
+            
+            
+            <a class="
+                font:semibold
+                font:fade
+                font:fade-10:hover
+                font:fade-30.active
+                px:8
+                transition:150ms;ease-in
+                
+            " href="/blog/about/" title="">About</a>
+            
+        </div>
+    </div>
+</nav>
+<div class="d:flex flex:column@<=sm pt:90 px:24 jc:center gap:44 word-break:break-word">
+        <div class="max-w:700 w:full box:content-box">
+<article class="box:border-box pt:32">
+    <header class="mb:32">
+        <div class="font:40 font:extrabold">Links and inode in Linux</div>
+        <div class="mt:16 f:fade-60">
+            <time>Aug 22, 2024</time>
+            </div>
+    </header><div class="
+    _:where(a):hover{text-decoration-color:fade}
+    _:where(a){text-decoration:2;underline;fade-10;_text-decoration-color:fade-70@dark}
+    _:where(blockquote){bl:5;solid;fade-76/.1;_bl:5;solid;fade-14/.1@dark}
+    _:where(code){font:90%;_v:middle}
+    _:where(code:not(.highlight_*,pre_*)){p:2;6;_r:4}
+    _:where(del){text-decoration:1;line-through;fade-68;_text-decoration-color:red-64@dark}
+    _:where(figcaption){text:14;_p:10;20;0;_width:fit;_mx:auto;_font:fade-56;_font:fade-57@dark}
+    _:where(h1){font:40;_font:extrabold}
+    _:where(h1,h2,h3)+:where(h1,h2,h3){mt:.5em}
+    _:where(h1,h2,h3,h4,h5,h6){mt:2em}
+    _:where(h2){mb:1em;_font:32}
+    _:where(h3){font:24}
+    _:where(h4){font:20}
+    _:where(h5){font:16}
+    _:where(h6){font:14}
+    _:where(li)::marker{font:fade-44;_font:fade-68@dark}
+    _:where(li){pl:.375em}
+    _:where(mark){text-decoration:1;underline;#fce016;_bg:transparent;_text-decoration-color:rgb(252;224;22/.5)@dark}
+    _:where(p,li){font:fade-76;_font:16;_line-height:1.65;_font:fade-14@dark}
+    _:where(p,pre,blockquote,figure,ul,ol,table){my:1.125em}
+    >:first-child{mt:0!}
+    _:where(pre){p:20;_r:8;_overflow:auto}
+    _:where(pre,code:not(.highlight_*)){bg:fade-2;_bg:fade-92!@dark}
+    _:where(strong,b,a,code:not(.highlight_*),mark,del){font:fade-92;_font:fade-12@dark}
+    _:where(table){width:full;_border-spacing:0}
+    _:where(td){v:baseline}
+    _:where(td,th):first-child{pl:0}
+    _:where(td,th):last-child{pr:0}
+    _:where(td,th){bb:1;solid;fade-92/.06;_p:6;_b:fade-4/.04@dark}
+    _:where(th){font:fade-78;_font:14;_text:left;_font:fade-12@dark}
+    _:where(th,p_code,li_code,a,mark){font:semibold;_font:medium@dark}
+    _:where(ul){list-style-type:disc}
+    _:where(ul,ol,blockquote){pl:1.5em}
+    _:where(video,img){max-width:full}
+    _:where(a,mark){text-underline-offset:3}
+    _:where(hr){h:2;_bg:fade-10;_bg:fade-70@dark;_my:3em}
+"><h3 id="firstly-what-is-an-inode-and-what-it-has-to-do-with-links-in-linux">Firstly, What is an inode and what it has to do with links in Linux?</h3>
+<p>An inode (or Index node) is a data structure in Linux File System which stores information about a file system object. Each object in file system gets an unique inode number which distinguishes it from other inodes. Every file and directory in the Linux File System has an inode number.</p>
+<p>You can check the inode number of files and dirs of your present working dir using <code>ls -i</code> command.</p>
+<pre tabindex="0"><code>$ ls -i
+7361517 dir1  7361518 file1  7361519 test1
+</code></pre><p>or use <code>ls -lih</code> to get a more reliability</p>
+<pre tabindex="0"><code>$ ls -lih
+total 28K
+7361517 drwxr-xr-x 2 user user 4.0K Aug 22 13:43 dir1
+7361518 -rw-r--r-- 2 user user   24 Aug 22 13:45 file1
+7361519 -rw-r--r-- 1 user user   24 Aug 22 13:46 test1
+</code></pre><p>To check the information stored in an inode you can use the <code>stat</code> command followed by the file or directory name.</p>
+<pre tabindex="0"><code>$ stat file1
+  File: file1
+  Size: 24              Blocks: 24         IO Block: 4096   regular file
+Device: 0,52    Inode: 7361518     Links: 2
+Access: (0644/-rw-r--r--)  Uid: ( 1000/  user)   Gid: ( 1000/  user)
+Access: 2024-08-22 13:45:16.873752928 +0530
+Modify: 2024-08-22 13:45:13.685749263 +0530
+Change: 2024-08-22 13:45:13.685749263 +0530
+ Birth: -
+</code></pre><p>This will show you the following details.</p>
+<ul>
+<li>Name</li>
+<li>Size</li>
+<li>Disk block location</li>
+<li>IO Block</li>
+<li>Device ID</li>
+<li>Inode number</li>
+<li>Links</li>
+<li>Permissions</li>
+<li>GID</li>
+<li>UID</li>
+<li>Last accessed</li>
+<li>Last modified</li>
+<li>Last changed</li>
+<li>And the birth time</li>
+</ul>
+<blockquote>
+<p>NOTE: a file system object exist when it has at least 1 link which points to its inode.</p>
+</blockquote>
+<h3 id="no-space-left-on-device-issue">&ldquo;No Space Left on Device&rdquo; issue</h3>
+<p>Sometimes it could happen that an operating system reposts that &ldquo;No Space Left on Device&rdquo;. But when you check the available space on your partition, it has a lot space available.</p>
+<p>One of the possible reason is that the system has gone out of inodes. To confirm run <code>df -i</code> and will show the disk utilization of inode on the system.</p>
+<pre tabindex="0"><code>$ df -i
+Filesystem              Inodes   IUsed    IFree IUse% Mounted on
+udev                    420615     464   420151    1% /dev
+tmpfs                   431491     907   430584    1% /run
+/dev/sda3             14409728 1446844 12962884   11% /
+tmpfs                   431491     926   430565    1% /dev/shm
+tmpfs                   431491       6   431485    1% /run/lock
+/dev/sda1                    0       0        0     - /boot/efi
+tmpfs                    86298     110    86188    1% /run/user/1000
+/home/user/.Private 14409728 1446844 12962884   11% /home/user
+</code></pre><p>Above is the output of the <code>df -i</code> command.</p>
+<p>This is how normally a inode usage will look like. But if your are getting the &ldquo;No Space Left on Device&rdquo; error then the &ldquo;IUsed%&rdquo; would be shown 100%. During the creation of partition, the inode limit is configured.</p>
+<h1 id="links">Links</h1>
+<p>On a Linux system you can create two types of link to a file.</p>
+<ul>
+<li><strong>Soft Link(or symbolic link)</strong></li>
+<li><strong>Hard Link</strong></li>
+</ul>
+<h3 id="soft-link">Soft Link</h3>
+<p>Soft links are similar to links on a windows computer. When you want a file to be stored on a different location but able to access the file using a link on your desktop or anywhere convenient.</p>
+<p>You can create a soft link or a symbolic link on Linux using the <code>ln</code> command followed by <code>-s</code> (for symbolic) tag and below is an example:</p>
+<pre tabindex="0"><code>$ ln -s /path/to/your/file /path/to/destination/dir/
+</code></pre><p>If you want to name the soft link the same as the source file then you can just point to the target dir without file name. But if you want the soft link to be named different then you can enter the name after the target dir.</p>
+<p>The inode number of the soft link is different than the source file inode number.</p>
+<p>If you the source file get deleted then the soft link becomes invalid.</p>
+<h3 id="hard-link">Hard Link</h3>
+<p>When a hard link is created, another file get created with the same underlying inode. Which means, both the files are referencing to the same inode. If you edit any one of the files, it gets reflected on the other file as well. But if you delete any one of the file the other file does not get deleted.</p>
+<p>You can create a hard link without using the <code>-s</code> tag and below is an example:</p>
+<pre tabindex="0"><code>$ ln /path/to/your/file /path/to/destination/dir/
+</code></pre><p>The inode number of the hard linked files are the same.</p>
+<p>If you want to move or transfer the hard linked file on a different drive, you may have a problem as the inode number of the file may be unknown to that drive&rsquo;s file system.</p>
+<p>Thanks for reading till the end.</p>
+</div>
+</article>
+<footer class="py:24">
+    <div class="f:fade-20 f:14 mb:8">© Pravin Kumar</div>
+    <div class="f:fade-60 f:12">Theme <a class="f:bold" href="https://github.com/serkodev/holy" _target="_blank">Holy</a></div>
+</footer>
+</div>
+    </div>
+</body>
+
+</html>
