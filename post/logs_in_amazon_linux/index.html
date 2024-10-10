@@ -4,30 +4,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <title>About - pravindotonline Blog</title>
+    <title>Logs in Amazon Linux - pravindotonline Blog</title>
 
     
     
-    <meta name="description" content="I&rsquo;m Pravin Kumar, a DevOps Engineer who is ready to take on any challenges and solving them. There is always something interesting I discover which I find useful and also increase my productivity.
+    <meta name="description" content="If you are using Amazon Linux for the first time after using other traditional Linux, you won&rsquo;t find the log file in the /var directory.
+This is because Amazon Linux by default the logs are recorded using systemd-journald and can be viewed using journalctl commands as below:
 
-  
-      
-          
-          
-      
-  
-  
-      
-          Website
-          GitHub
-      
-      
-          X
-          LinkedIn
-      
-  
+journalctl    to view all logs
+journalctl -r to view logs in reverse order
+journalctl -u &lt;service_name&gt;  to view the logs of a specific service
 
-I write blog post on Cloud, Kubernetes, Container, Linux, Automation and HomeLab(soon)." />
+If we want to have the actual log fies like any traditional linux distribution in /var/log/syslog or /var/log/messages files, the we can install rsyslog package on Amazon Linux instance(s) as below:" />
     <meta name="author" content="Pravin Kumar" />
     
 
@@ -86,8 +74,10 @@ I write blog post on Cloud, Kubernetes, Container, Linux, Automation and HomeLab
         <div class="max-w:700 w:full box:content-box">
 <article class="box:border-box pt:32">
     <header class="mb:32">
-        <div class="font:40 font:extrabold">About</div>
-        <div class="mt:16 f:fade-60"></div>
+        <div class="font:40 font:extrabold">Logs in Amazon Linux</div>
+        <div class="mt:16 f:fade-60">
+            <time>Oct 10, 2024</time>
+            </div>
     </header><div class="
     _:where(a):hover{text-decoration-color:fade}
     _:where(a){text-decoration:2;underline;fade-10;_text-decoration-color:fade-70@dark}
@@ -125,26 +115,21 @@ I write blog post on Cloud, Kubernetes, Container, Linux, Automation and HomeLab
     _:where(video,img){max-width:full}
     _:where(a,mark){text-underline-offset:3}
     _:where(hr){h:2;_bg:fade-10;_bg:fade-70@dark;_my:3em}
-"><p>I&rsquo;m Pravin Kumar, a DevOps Engineer who is ready to take on any challenges and solving them. There is always something interesting I discover which I find useful and also increase my productivity.</p>
-<table>
-  <thead>
-      <tr>
-          <th style="text-align: left"></th>
-          <th style="text-align: left"></th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: left"><a href="https://pravindotonline.github.io">Website</a></td>
-          <td style="text-align: left"><a href="https://github.com/pravindotonline">GitHub</a></td>
-      </tr>
-      <tr>
-          <td style="text-align: left"><a href="https://x.com/pravindotonline">X</a></td>
-          <td style="text-align: left"><a href="https://linkedin.com/in/pravinkumarone">LinkedIn</a></td>
-      </tr>
-  </tbody>
-</table>
-<p>I write blog post on Cloud, Kubernetes, Container, Linux, Automation and HomeLab(soon).</p>
+"><p>If you are using Amazon Linux for the first time after using other traditional Linux, you won&rsquo;t find the log file in the <code>/var</code> directory.</p>
+<p>This is because Amazon Linux by default the logs are recorded using <code>systemd-journald</code> and can be viewed using <code>journalctl</code> commands as below:</p>
+<ul>
+<li><code>journalctl</code>    to view all logs</li>
+<li><code>journalctl -r</code> to view logs in reverse order</li>
+<li><code>journalctl -u &lt;service_name&gt;</code>  to view the logs of a specific service</li>
+</ul>
+<p>If we want to have the actual log fies like any traditional linux distribution in <code>/var/log/syslog</code> or <code>/var/log/messages</code> files, the we can install <code>rsyslog</code> package on Amazon Linux instance(s) as below:</p>
+<ol>
+<li>Install <code>rsyslog</code>:                   <code>sudo yum install rsyslog</code></li>
+<li>Start the <code>rsyslog</code> service:         <code>sudo systemctl start rsyslog</code></li>
+<li>Enable <code>rsyslog</code> to start on boot:   <code>sudo systemctl enable rsyslog</code></li>
+</ol>
+<p>After installation, <code>rsyslog</code> will create and maintain log files in the <code>/var/log</code> directory, including <code>/var/log/messages</code>.</p>
+<p>Thanks for reading.</p>
 </div>
 </article>
 <footer class="py:24">

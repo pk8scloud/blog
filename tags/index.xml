@@ -7,8 +7,29 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Copyright © 2024, Pravin Kumar; all rights reserved.</copyright>
-    <lastBuildDate>Wed, 04 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 10 Oct 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://pravindotonline.github.io/blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AWS</title>
+      <link>https://pravindotonline.github.io/blog/tags/aws/</link>
+      <pubDate>Thu, 10 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://pravindotonline.github.io/blog/tags/aws/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Index</title>
+      <link>https://pravindotonline.github.io/blog/tags/index/</link>
+      <pubDate>Thu, 10 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://pravindotonline.github.io/blog/tags/index/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Linux</title>
+      <link>https://pravindotonline.github.io/blog/tags/linux/</link>
+      <pubDate>Thu, 10 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://pravindotonline.github.io/blog/tags/linux/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Bash</title>
       <link>https://pravindotonline.github.io/blog/tags/bash/</link>
@@ -24,13 +45,6 @@
       <description></description>
     </item>
     <item>
-      <title>Index</title>
-      <link>https://pravindotonline.github.io/blog/tags/index/</link>
-      <pubDate>Wed, 04 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>https://pravindotonline.github.io/blog/tags/index/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Script</title>
       <link>https://pravindotonline.github.io/blog/tags/script/</link>
       <pubDate>Wed, 04 Sep 2024 00:00:00 +0000</pubDate>
@@ -42,13 +56,6 @@
       <link>https://pravindotonline.github.io/blog/tags/command/</link>
       <pubDate>Thu, 22 Aug 2024 00:00:00 +0000</pubDate>
       <guid>https://pravindotonline.github.io/blog/tags/command/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Linux</title>
-      <link>https://pravindotonline.github.io/blog/tags/linux/</link>
-      <pubDate>Thu, 22 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://pravindotonline.github.io/blog/tags/linux/</guid>
       <description></description>
     </item>
   </channel>
