@@ -2,55 +2,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/blog/</loc>
+    <loc>https://pk8s.cloud/blog/</loc>
     <lastmod>2024-10-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/tags/aws/</loc>
+    <loc>https://pk8s.cloud/blog/tags/aws/</loc>
     <lastmod>2024-10-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/tags/index/</loc>
+    <loc>https://pk8s.cloud/blog/tags/index/</loc>
     <lastmod>2024-10-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/tags/linux/</loc>
+    <loc>https://pk8s.cloud/blog/tags/linux/</loc>
     <lastmod>2024-10-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/post/logs_in_amazon_linux/</loc>
+    <loc>https://pk8s.cloud/blog/post/logs_in_amazon_linux/</loc>
     <lastmod>2024-10-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/post/</loc>
+    <loc>https://pk8s.cloud/blog/post/</loc>
     <lastmod>2024-10-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/tags/</loc>
+    <loc>https://pk8s.cloud/blog/tags/</loc>
     <lastmod>2024-10-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/post/all_git_repo_status/</loc>
+    <loc>https://pk8s.cloud/blog/post/all_git_repo_status/</loc>
     <lastmod>2024-09-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/tags/bash/</loc>
+    <loc>https://pk8s.cloud/blog/tags/bash/</loc>
     <lastmod>2024-09-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/tags/git/</loc>
+    <loc>https://pk8s.cloud/blog/tags/git/</loc>
     <lastmod>2024-09-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/tags/script/</loc>
+    <loc>https://pk8s.cloud/blog/tags/script/</loc>
     <lastmod>2024-09-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/tags/command/</loc>
+    <loc>https://pk8s.cloud/blog/tags/command/</loc>
     <lastmod>2024-08-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/post/links_and_inode_in_linux/</loc>
+    <loc>https://pk8s.cloud/blog/post/links_and_inode_in_linux/</loc>
     <lastmod>2024-08-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/post/publish_script_for_rss_and_blog/</loc>
+    <loc>https://pk8s.cloud/blog/post/publish_script_for_rss_and_blog/</loc>
     <lastmod>2024-08-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/archives/</loc>
+    <loc>https://pk8s.cloud/blog/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/about/</loc>
+    <loc>https://pk8s.cloud/blog/about/</loc>
   </url><url>
-    <loc>http://localhost:1313/blog/categories/</loc>
+    <loc>https://pk8s.cloud/blog/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/blog/series/</loc>
+    <loc>https://pk8s.cloud/blog/series/</loc>
   </url>
 </urlset>

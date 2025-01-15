@@ -2,60 +2,60 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on pk8s.cloud Blog</title>
-    <link>http://localhost:1313/blog/tags/</link>
+    <link>https://pk8s.cloud/blog/tags/</link>
     <description>Recent content in Tags on pk8s.cloud Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Copyright © 2024, Pravin Kumar; all rights reserved.</copyright>
     <lastBuildDate>Thu, 10 Oct 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://pk8s.cloud/blog/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AWS</title>
-      <link>http://localhost:1313/blog/tags/aws/</link>
+      <link>https://pk8s.cloud/blog/tags/aws/</link>
       <pubDate>Thu, 10 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/tags/aws/</guid>
+      <guid>https://pk8s.cloud/blog/tags/aws/</guid>
       <description></description>
     </item>
     <item>
       <title>Index</title>
-      <link>http://localhost:1313/blog/tags/index/</link>
+      <link>https://pk8s.cloud/blog/tags/index/</link>
       <pubDate>Thu, 10 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/tags/index/</guid>
+      <guid>https://pk8s.cloud/blog/tags/index/</guid>
       <description></description>
     </item>
     <item>
       <title>Linux</title>
-      <link>http://localhost:1313/blog/tags/linux/</link>
+      <link>https://pk8s.cloud/blog/tags/linux/</link>
       <pubDate>Thu, 10 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/tags/linux/</guid>
+      <guid>https://pk8s.cloud/blog/tags/linux/</guid>
       <description></description>
     </item>
     <item>
       <title>Bash</title>
-      <link>http://localhost:1313/blog/tags/bash/</link>
+      <link>https://pk8s.cloud/blog/tags/bash/</link>
       <pubDate>Wed, 04 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/tags/bash/</guid>
+      <guid>https://pk8s.cloud/blog/tags/bash/</guid>
       <description></description>
     </item>
     <item>
       <title>Git</title>
-      <link>http://localhost:1313/blog/tags/git/</link>
+      <link>https://pk8s.cloud/blog/tags/git/</link>
       <pubDate>Wed, 04 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/tags/git/</guid>
+      <guid>https://pk8s.cloud/blog/tags/git/</guid>
       <description></description>
     </item>
     <item>
       <title>Script</title>
-      <link>http://localhost:1313/blog/tags/script/</link>
+      <link>https://pk8s.cloud/blog/tags/script/</link>
       <pubDate>Wed, 04 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/tags/script/</guid>
+      <guid>https://pk8s.cloud/blog/tags/script/</guid>
       <description></description>
     </item>
     <item>
       <title>Command</title>
-      <link>http://localhost:1313/blog/tags/command/</link>
+      <link>https://pk8s.cloud/blog/tags/command/</link>
       <pubDate>Thu, 22 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/tags/command/</guid>
+      <guid>https://pk8s.cloud/blog/tags/command/</guid>
       <description></description>
     </item>
   </channel>
