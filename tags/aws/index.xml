@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>AWS on pravindotonline Blog</title>
-    <link>https://pravindotonline.github.io/blog/tags/aws/</link>
-    <description>Recent content in AWS on pravindotonline Blog</description>
+    <title>AWS on pk8s.cloud Blog</title>
+    <link>http://localhost:1313/blog/tags/aws/</link>
+    <description>Recent content in AWS on pk8s.cloud Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>Copyright © 2024, Pravin Kumar; all rights reserved.</copyright>
     <lastBuildDate>Thu, 10 Oct 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://pravindotonline.github.io/blog/tags/aws/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/blog/tags/aws/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Logs in Amazon Linux</title>
-      <link>https://pravindotonline.github.io/blog/post/logs_in_amazon_linux/</link>
+      <link>http://localhost:1313/blog/post/logs_in_amazon_linux/</link>
       <pubDate>Thu, 10 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>https://pravindotonline.github.io/blog/post/logs_in_amazon_linux/</guid>
+      <guid>http://localhost:1313/blog/post/logs_in_amazon_linux/</guid>
       <description>&lt;p&gt;If you are using Amazon Linux for the first time after using other traditional Linux, you won&amp;rsquo;t find the log file in the &lt;code&gt;/var&lt;/code&gt; directory.&lt;/p&gt;&#xA;&lt;p&gt;This is because Amazon Linux by default the logs are recorded using &lt;code&gt;systemd-journald&lt;/code&gt; and can be viewed using &lt;code&gt;journalctl&lt;/code&gt; commands as below:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;journalctl&lt;/code&gt;    to view all logs&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;journalctl -r&lt;/code&gt; to view logs in reverse order&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;journalctl -u &amp;lt;service_name&amp;gt;&lt;/code&gt;  to view the logs of a specific service&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;If we want to have the actual log fies like any traditional linux distribution in &lt;code&gt;/var/log/syslog&lt;/code&gt; or &lt;code&gt;/var/log/messages&lt;/code&gt; files, the we can install &lt;code&gt;rsyslog&lt;/code&gt; package on Amazon Linux instance(s) as below:&lt;/p&gt;</description>
     </item>
   </channel>
